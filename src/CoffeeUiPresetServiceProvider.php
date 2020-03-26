@@ -1,6 +1,6 @@
 <?php
 
-namespace CoffeeFrontendPresets\CoffeeUiPreset;
+namespace FajarArtBekasi\CoffeeUiPreset;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;

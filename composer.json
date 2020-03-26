@@ -1,5 +1,5 @@
 {
-    "name": "coffee-frontend-preset/coffee-ui-dashboard",
+    "name": "fajarartbekasi/coffee-ui-dashboard",
     "description": "Laravel 5.x Front-end preset for coffee ui dashboard",
     "type": "library",
     "license": "MIT",
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "CoffeeFrontendPresets\\CoffeeUiPreset\\": "src/"
+            "FajarArtBekasi\\CoffeeUiPreset\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CoffeeFrontendPresets\\CoffeeUiPreset\\CoffeeUiPresetServiceProvider"
+                "FajarArtBekasi\\CoffeeUiPreset\\CoffeeUiPresetServiceProvider"
             ]
         }
     }
