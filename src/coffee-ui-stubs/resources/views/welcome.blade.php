@@ -1,6 +1,6 @@
 @extends(
     'layouts.welcome',[
-        'backgroundImage' => asset('assets') . "/banner/nordwood-themes-ivP3TYdLvw0-unsplash.jpg"
+        'backgroundImage' => asset('assets') . "/img/nordwood-themes-ivP3TYdLvw0-unsplash.jpg"
     ]
 )
 
