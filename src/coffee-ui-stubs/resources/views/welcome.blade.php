@@ -1,7 +1,5 @@
 @extends(
-    'layouts.welcome',[
-        'backgroundImage' => asset('assets') . "/img/nordwood-themes-ivP3TYdLvw0-unsplash.jpg"
-    ]
+    'layouts.welcome'
 )
 
 @section('content')

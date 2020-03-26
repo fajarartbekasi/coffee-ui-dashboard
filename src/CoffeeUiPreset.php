@@ -47,7 +47,7 @@ class CoffeeUiPreset extends Preset
      */
     protected static function updateAssets()
     {
-        static::copyDirectory('resources/assets', public_path('assets'));
+        static::copyDirectory('resources/assets', public_path());
     }
 
     /**

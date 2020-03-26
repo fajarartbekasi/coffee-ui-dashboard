@@ -11,7 +11,7 @@
 
         <!-- Styles -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
-        <link rel="stylesheet" href="{{asset('assets/')}}/css/app.css">
+        <link rel="stylesheet" href="{{asset('css/')}}/app.css">
     </head>
     <body>
         @include('layouts.page_template.nav')

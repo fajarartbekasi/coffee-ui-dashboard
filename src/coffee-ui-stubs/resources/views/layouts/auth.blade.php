@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{asset('assets/')}}/css/_auth.css">
+        <link rel="stylesheet" href="{{asset('css/')}}/_auth.css">
     </head>
     <body>
         <main id="app" class="flex-shrink-0">

@@ -10883,11 +10883,11 @@ a.text-dark:focus {
 }
 
 body {
-  color: #8B6B61;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-image: url(/images/nordwood-themes-ivP3TYdLvw0-unsplash.jpg?7698b39c3206f7e8760ddedd226bc64f);
 }
 
 .full-height {

@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{asset('assets/')}}/css/_welcome.css">
+        <link rel="stylesheet" href="{{asset('css/')}}/_welcome.css">
     </head>
     <body>
         <main id="app" >

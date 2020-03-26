@@ -6,15 +6,13 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
 body {
-    color: #8B6B61;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('img/nordwood-themes-ivP3TYdLvw0-unsplash.jpg');
 }
-
 .full-height {
     height: 36rem;
 }
