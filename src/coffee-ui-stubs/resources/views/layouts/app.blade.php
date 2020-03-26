@@ -24,10 +24,10 @@
                 </main>
             </div>
         </div>
-        <script type="text/javascript" scr="{{asset('assets/')}}/js/app.js"></script>
-        <script src="{{asset('assets/')}}/js/chartDoughNut.js"></script>
-        <script src="{{asset('assets/')}}/js/chartOrder.js"></script>
-        <script src="{{asset('assets/')}}/js/revenueGrowth.js"></script>
+        <script type="text/javascript" scr="{{asset('js/')}}/app.js"></script>
+        <script src="{{asset('js/')}}/chartDoughNut.js"></script>
+        <script src="{{asset('js/')}}/chartOrder.js"></script>
+        <script src="{{asset('js/')}}/revenueGrowth.js"></script>
         <script>
             var dropdown = document.getElementsByClassName("dropdown-btn");
             var i;
