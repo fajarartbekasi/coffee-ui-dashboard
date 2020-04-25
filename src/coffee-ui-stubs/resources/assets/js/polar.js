@@ -1,23 +1,23 @@
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
+var ctx = document.getElementById('bubble');
+var bubble = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Target', 'Feb', 'Mart', 'Ebay'],
+        labels: ['Target', 'Feb', 'Mart'],
         datasets: [{
-            data: [50, 30, 30, 30],
+            data: [30, 30, 50],
             backgroundColor: [
-                'rgba(100, 181, 246)',
+                'rgba(255, 218, 131)',
                 'rgba(163, 160, 251)',
-                'rgba(175, 68, 72)',
                 'rgba(255, 126, 71)'
             ],
         }]
     },
+
     options: {
         responsive: true,
         legend: {
-            padding: [10],
             position: 'bottom'
         }
+
     }
 });

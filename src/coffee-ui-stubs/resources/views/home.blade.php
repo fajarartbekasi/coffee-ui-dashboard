@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="d-flex row justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
+<div class="row pt-8 pb-2 mb-3">
     <div class="col-md-6">
       <div class="card border-0">
         <div class="card-body">
@@ -19,7 +19,7 @@
                 <a href="#" class="btn btn-info"> View Sales</a>
               </div>
             </div>
-            <div class="pt-2">
+            <div class="pt-2 mr-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24">
                 <path id="icon-trophy" d="M12.8,23.6V21.1a7.2,7.2,0,0,1-5.088-3.6A4.824,4.824,0,0,1,2,12.8v-6A2.407,2.407,0,0,1,4.4,4.4H6.8A2.407,2.407,0,0,1,9.2,2h9.6a2.4,2.4,0,0,1,2.4,2.4h2.4A2.4,2.4,0,0,1,26,6.8v6a4.8,4.8,0,0,1-5.712,4.716A7.2,7.2,0,0,1,15.2,21.1v2.5H20A1.2,1.2,0,0,1,20,26H8a1.2,1.2,0,1,1,0-2.4Zm8.3-8.4h.1a2.4,2.4,0,0,0,2.4-2.4v-6H21.2V14A7.961,7.961,0,0,1,21.1,15.2ZM6.9,15.2A7.248,7.248,0,0,1,6.8,14V6.8H4.4v6a2.4,2.4,0,0,0,2.5,2.4ZM9.2,4.4V14a4.8,4.8,0,0,0,9.6,0V4.4Z" transform="translate(-2 -2)" fill="#ff7d47"/>
               </svg>
@@ -28,59 +28,35 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
       <div class="card border-0">
-        <div class="card-body">
-          <div class="d-flex">
-              <div class="mr-auto">
-                  <h5 class="font-weight-bolder">Visit of 2020</h5>
-              </div>
-              <div>
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 7.465 26.031">
-                    <path id="icon-more-horiz" d="M4.55,16.465A3.644,3.644,0,0,1,1,12.732,3.644,3.644,0,0,1,4.55,9,3.644,3.644,0,0,1,8.1,12.732a3.644,3.644,0,0,1-3.55,3.732Zm0-2.488a1.246,1.246,0,0,0,0-2.488,1.246,1.246,0,0,0,0,2.488Zm9.466,2.488a3.644,3.644,0,0,1-3.55-3.732A3.644,3.644,0,0,1,14.016,9a3.644,3.644,0,0,1,3.55,3.732A3.644,3.644,0,0,1,14.016,16.465Zm0-2.488a1.246,1.246,0,1,0-1.183-1.244A1.215,1.215,0,0,0,14.016,13.976Zm9.466,2.488a3.644,3.644,0,0,1-3.55-3.732,3.554,3.554,0,1,1,7.1,0A3.644,3.644,0,0,1,23.482,16.465Zm0-2.488A1.246,1.246,0,1,0,22.3,12.732,1.215,1.215,0,0,0,23.482,13.976Z" transform="translate(16.465 -1) rotate(90)"/>
-                  </svg>
-
-                </span>
-              </div>
-          </div>
-          <div class="d-flex mx-auto" style="height: 77%; width:77%">
-            <canvas id="myChart" ></canvas>
-          </div>
+        <div class="card-body text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#659398" width="120" height="120" viewBox="0 0 42 36.484">
+              <path id="icon-briefcase" d="M14.6,11.107V7.054A4.141,4.141,0,0,1,18.8,3h8.4a4.129,4.129,0,0,1,4.2,4.054v4.054h8.4A4.129,4.129,0,0,1,44,15.161V35.43a4.129,4.129,0,0,1-4.2,4.054H6.2A4.129,4.129,0,0,1,2,35.43V15.161a4.141,4.141,0,0,1,4.2-4.054Zm16.8,4.054H14.6V35.43H31.4Zm4.2,0V35.43h4.2V15.161Zm-25.2,0H6.2V35.43h4.2Zm8.4-4.054h8.4V7.054H18.8Z" transform="translate(-2 -3)"/>
+            </svg>
+            <div class="pt-3">
+              <h6 class="text-muted">New Products</h6>
+              <h3 class="text-info font-weight-bolder">1.2K</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0">
+        <div class="card-body text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#AF4448" viewBox="0 0 24 24" width="120" height="120">
+              <path class="heroicon-ui" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v2z"/>
+            </svg>
+            <div class="pt-3">
+              <h6 class="text-muted">New Users</h6>
+              <h3 class="text-info font-weight-bolder">45.6 K</h3>
+            </div>
         </div>
       </div>
     </div>
 </div>
 <!-- second content -->
 <div class="row mb-3">
-  <div class="col-md-3">
-    <div class="card border-0 mx-sm-1 py-3">
-        <div class="card border-0 text-info p-3 my-card-teal" >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#659398" width="24" height="24" viewBox="0 0 42 36.484">
-            <path id="icon-briefcase" d="M14.6,11.107V7.054A4.141,4.141,0,0,1,18.8,3h8.4a4.129,4.129,0,0,1,4.2,4.054v4.054h8.4A4.129,4.129,0,0,1,44,15.161V35.43a4.129,4.129,0,0,1-4.2,4.054H6.2A4.129,4.129,0,0,1,2,35.43V15.161a4.141,4.141,0,0,1,4.2-4.054Zm16.8,4.054H14.6V35.43H31.4Zm4.2,0V35.43h4.2V15.161Zm-25.2,0H6.2V35.43h4.2Zm8.4-4.054h8.4V7.054H18.8Z" transform="translate(-2 -3)"/>
-          </svg>
-        </div>
-        <div class="text-info text-center mt-5">
-          <h6 class="text-muted">New products</h6>
-        </div>
-        <div class="text-teal text-center mt-2">
-          <h5 class="font-weight-bolder">1.2 K</h5>
-        </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="card border-0 mx-sm-1 py-3">
-        <div class="card border-0 text-info p-3 my-card-red" >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v2z"/></svg>
-        </div>
-        <div class="text-info text-center mt-5">
-          <h6 class="text-muted">New products</h6>
-        </div>
-        <div class="text-teal text-center mt-2">
-          <h5 class="font-weight-bolder">1.2 K</h5>
-        </div>
-    </div>
-  </div>
   <div class="col-md-6">
     <div class="card border-0" style="height: 300px;">
       <div class="card-body">
@@ -97,8 +73,30 @@
               </span>
             </div>
         </div>
-        <div class="" style="max-width:500px;">
+        <div class="" style="top:94px; left:20px; width:450px; height:230px;">
           <canvas id="revenueGrowth" ></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card border-0">
+      <div class="card-body">
+        <div class="d-flex">
+            <div class="mr-auto">
+                <h5 class="font-weight-bolder">Visit of 2020</h5>
+            </div>
+            <div class="d-flex">
+              <h5>$25,980</h5>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 7.465 26.031">
+                  <path id="icon-more-horiz" d="M4.55,16.465A3.644,3.644,0,0,1,1,12.732,3.644,3.644,0,0,1,4.55,9,3.644,3.644,0,0,1,8.1,12.732a3.644,3.644,0,0,1-3.55,3.732Zm0-2.488a1.246,1.246,0,0,0,0-2.488,1.246,1.246,0,0,0,0,2.488Zm9.466,2.488a3.644,3.644,0,0,1-3.55-3.732A3.644,3.644,0,0,1,14.016,9a3.644,3.644,0,0,1,3.55,3.732A3.644,3.644,0,0,1,14.016,16.465Zm0-2.488a1.246,1.246,0,1,0-1.183-1.244A1.215,1.215,0,0,0,14.016,13.976Zm9.466,2.488a3.644,3.644,0,0,1-3.55-3.732,3.554,3.554,0,1,1,7.1,0A3.644,3.644,0,0,1,23.482,16.465Zm0-2.488A1.246,1.246,0,1,0,22.3,12.732,1.215,1.215,0,0,0,23.482,13.976Z" transform="translate(16.465 -1) rotate(90)"/>
+                </svg>
+              </span>
+            </div>
+        </div>
+        <div class="d-flex mx-auto" style="top:94px; left:20px; width:500px; height:230px;">
+          <canvas id="myChart" ></canvas>
         </div>
       </div>
     </div>
@@ -123,7 +121,9 @@
                       <button type="submit" class=" btn btn-blue-light">Week</button>
                   </div>
                 </div>
-                <canvas id="order"></order>
+                <div style="top:94px; left:20px; width:650px; height:330px;">
+                    <canvas id="order"></order>
+                </div>
             </div>
           </div>
           <div class="col-md-4">
@@ -409,7 +409,7 @@
               <div class="mr-auto">
                 <div>
                   <div class="d-flex">
-                    <img src="{{asset('assets/img/user.jpg')}}"
+                    <img src="{{asset('images/user.jpg')}}"
                           width="50"
                           height="50"
                           class="rounded-circle shadow"
@@ -444,7 +444,7 @@
               <div class="mr-auto">
                 <div>
                   <div class="d-flex">
-                    <img src="{{asset('assets/img/michael-dam-mEZ3PoFGs_k-unsplash.jpg')}}"
+                    <img src="{{asset('images/michael-dam-mEZ3PoFGs_k-unsplash.jpg')}}"
                           width="50"
                           height="50"
                           class="rounded-circle shadow"
@@ -479,7 +479,7 @@
               <div class="mr-auto">
                 <div>
                   <div class="d-flex">
-                    <img src="{{asset('assets/img/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg')}}"
+                    <img src="{{asset('images/houcine-ncib-B4TjXnI0Y2c-unsplash.jpg')}}"
                           width="50"
                           height="50"
                           class="rounded-circle shadow"
@@ -512,7 +512,7 @@
               <div class="mr-auto">
                 <div>
                   <div class="d-flex">
-                    <img src="{{asset('assets/img/joel-mott-LaK153ghdig-unsplash.jpg')}}"
+                    <img src="{{asset('images/joel-mott-LaK153ghdig-unsplash.jpg')}}"
                           width="50"
                           height="50"
                           class="rounded-circle shadow"

@@ -1,4 +1,4 @@
-var ctx = document.getElementById('revenueGrowth').getContext('2d');
+var ctx = document.getElementById('revenueGrowth');
 var revenueGrowth = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -11,7 +11,7 @@ var revenueGrowth = new Chart(ctx, {
     },
 
     options: {
-        respinsive: true,
+        responsive: true,
         legend: {
             padding: [10],
             position: 'bottom'

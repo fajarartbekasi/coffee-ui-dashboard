@@ -1,4 +1,4 @@
-var ctx = document.getElementById('order').getContext('2d');
+var ctx = document.getElementById('order');
 var order = new Chart(ctx, {
     type: 'line',
     data: {
@@ -11,7 +11,7 @@ var order = new Chart(ctx, {
     },
 
     options: {
-        respinsive: true,
+        responsive: true,
         legend: {
             padding: [10],
             position: 'bottom'

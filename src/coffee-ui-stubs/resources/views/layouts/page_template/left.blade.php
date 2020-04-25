@@ -1,4 +1,4 @@
-<nav class="col-md-2 d-none d-md-block bg-coffee-dark sidebar pt-8 mb-3">
+<nav class="col-md-2 d-none d-md-block bg-coffee-dark sidebar pt-8 mb-3 overflow-auto min-vh-100" >
     <div class="sidebar-sticky mn-3">
         <ul class="nav flex-column">
             <button class="dropdown-btn">
@@ -15,7 +15,7 @@
             </button>
             <div class="dropdown-container">
                 <ul class="text-coffee-light">
-                    <li><a href="#">Analitycs</a></li>
+                    <li><a href="{{route('analityc')}}">Analitycs</a></li>
                     <li><a href="#">eCommerce</a></li>
                 </ul>
             </div>

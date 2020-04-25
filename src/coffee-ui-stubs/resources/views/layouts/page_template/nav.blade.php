@@ -37,7 +37,7 @@
                   <ul class="list-group overflow-auto">
                     <li class="list-group-item border-0">
                       <div class="d-flex align-items-center">
-                        <img src="{{asset('assets/img/user.jpg')}}"
+                        <img src="{{asset('images/user.jpg')}}"
                               width="50"
                               height="50"
                               class="rounded-circle shadow"
@@ -58,7 +58,7 @@
                     </li>
                     <li class="list-group-item border-0">
                       <div class="d-flex align-items-center">
-                        <img src="{{asset('assets/img/user.jpg')}}"
+                        <img src="{{asset('images/user.jpg')}}"
                               width="50"
                               height="50"
                               class="rounded-circle shadow"
@@ -79,7 +79,7 @@
                     </li>
                     <li class="list-group-item border-0">
                       <div class="d-flex align-items-center">
-                        <img src="{{asset('assets/img/user.jpg')}}"
+                        <img src="{{asset('images/user.jpg')}}"
                               width="50"
                               height="50"
                               class="rounded-circle shadow"
@@ -100,7 +100,7 @@
                     </li>
                     <li class="list-group-item border-0">
                       <div class="d-flex align-items-center">
-                        <img src="{{asset('assets/img/user.jpg')}}"
+                        <img src="{{asset('images/user.jpg')}}"
                               width="50"
                               height="50"
                               class="rounded-circle shadow"
@@ -121,7 +121,7 @@
                     </li>
                     <li class="list-group-item border-0">
                       <div class="d-flex align-items-center">
-                        <img src="{{asset('assets/img/user.jpg')}}"
+                        <img src="{{asset('images/user.jpg')}}"
                               width="50"
                               height="50"
                               class="rounded-circle shadow"
@@ -154,7 +154,7 @@
             <small class="text-dark font-weight-bolder mr-2">
               Chaerul Fajar Subhi
             </small>
-            <img src="{{asset('assets/img/user.jpg')}}"
+            <img src="{{asset('images/user.jpg')}}"
                   width="30"
                   height="30"
                   class="rounded-circle shadow"

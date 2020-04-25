@@ -26,6 +26,8 @@ class CoffeeUiPreset extends Preset
 
         static::addAlerts();
 
+        static::addUserManagement();
+
         // static::removeNodeModules();
     }
 
@@ -112,6 +114,22 @@ class CoffeeUiPreset extends Preset
     public static function addAlerts()
     {
         static::copyDirectory('resources/views/alerts', resource_path('views/alerts'));
+    }
+    public static function addUserManagement()
+    {
+        // copy Controllers to app_path
+        static::copyFile('app/Http/Controllers/AnalitycController.php', app_path('Http/Controllers/AnalitycController.php'));
+
+        // Add routes
+        file_put_contents(
+            './routes/web.php',
+            "Route::group(['middleware' => 'auth'], function () {
+                \n\tRoute::get('analityc', 'AnalitycController@index')->name('analityc');
+
+                \n});
+            \n\n",
+            FILE_APPEND
+        );
     }
 
     /**

@@ -28,6 +28,31 @@
         <script src="{{asset('js/')}}/chartDoughNut.js"></script>
         <script src="{{asset('js/')}}/chartOrder.js"></script>
         <script src="{{asset('js/')}}/revenueGrowth.js"></script>
+        <script src="{{asset('js/')}}/polar.js"></script>
+        <script src="{{asset('js/')}}/users.js"></script>
+        <script src="{{asset('js/')}}/bounceRate.js"></script>
+        <script src="{{asset('js/')}}/sessions.js"></script>
+        <script src="{{asset('js/')}}/websiteAnalitics.js"></script>
+        <script src="{{asset('js/')}}/referral.js"></script>
+        <script src="{{asset('js/')}}/profit.js"></script>
+        <script src="{{asset('js/')}}/registration.js"></script>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+        </script>
         <script>
             var dropdown = document.getElementsByClassName("dropdown-btn");
             var i;
