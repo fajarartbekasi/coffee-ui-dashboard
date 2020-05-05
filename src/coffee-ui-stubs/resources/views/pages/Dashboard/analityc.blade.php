@@ -569,3 +569,14 @@
 </div>
 
 @endsection
+
+@push('scripts')
+<script src="{{asset('js/')}}/polar.js"></script>
+<script src="{{asset('js/')}}/users.js"></script>
+<script src="{{asset('js/')}}/bounceRate.js"></script>
+<script src="{{asset('js/')}}/sessions.js"></script>
+<script src="{{asset('js/')}}/websiteAnalitics.js"></script>
+<script src="{{asset('js/')}}/referral.js"></script>
+<script src="{{asset('js/')}}/profit.js"></script>
+<script src="{{asset('js/')}}/registration.js"></script>
+@endpush

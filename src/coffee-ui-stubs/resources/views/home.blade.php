@@ -544,3 +544,9 @@
   </div>
 </div>
 @endsection
+
+@push('scripts')
+<script src="{{asset('js/')}}/chartDoughNut.js"></script>
+<script src="{{asset('js/')}}/chartOrder.js"></script>
+<script src="{{asset('js/')}}/revenueGrowth.js"></script>
+@endpush

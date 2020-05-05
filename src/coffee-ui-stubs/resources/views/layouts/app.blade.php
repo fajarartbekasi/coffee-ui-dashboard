@@ -25,17 +25,7 @@
             </div>
         </div>
         <script type="text/javascript" scr="{{asset('js/')}}/app.js"></script>
-        <script src="{{asset('js/')}}/chartDoughNut.js"></script>
-        <script src="{{asset('js/')}}/chartOrder.js"></script>
-        <script src="{{asset('js/')}}/revenueGrowth.js"></script>
-        <script src="{{asset('js/')}}/polar.js"></script>
-        <script src="{{asset('js/')}}/users.js"></script>
-        <script src="{{asset('js/')}}/bounceRate.js"></script>
-        <script src="{{asset('js/')}}/sessions.js"></script>
-        <script src="{{asset('js/')}}/websiteAnalitics.js"></script>
-        <script src="{{asset('js/')}}/referral.js"></script>
-        <script src="{{asset('js/')}}/profit.js"></script>
-        <script src="{{asset('js/')}}/registration.js"></script>
+        @stack('scripts')
         <script>
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");

@@ -119,12 +119,14 @@ class CoffeeUiPreset extends Preset
     {
         // copy Controllers to app_path
         static::copyFile('app/Http/Controllers/AnalitycController.php', app_path('Http/Controllers/AnalitycController.php'));
+        static::copyFile('app/Http/Controllers/MailController.php', app_path('Http/Controllers/MailController.php'));
 
         // Add routes
         file_put_contents(
             './routes/web.php',
             "Route::group(['middleware' => 'auth'], function () {
                 \n\tRoute::get('analityc', 'AnalitycController@index')->name('analityc');
+                \n\tRoute::get('mail', 'MailController@index')->name('mail');
 
                 \n});
             \n\n",
