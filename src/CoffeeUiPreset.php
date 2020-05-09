@@ -121,6 +121,7 @@ class CoffeeUiPreset extends Preset
         static::copyFile('app/Http/Controllers/AnalitycController.php', app_path('Http/Controllers/AnalitycController.php'));
         static::copyFile('app/Http/Controllers/MailController.php', app_path('Http/Controllers/MailController.php'));
         static::copyFile('app/Http/Controllers/ChatController.php', app_path('Http/Controllers/ChatController.php'));
+        static::copyFile('app/Http/Controllers/TodoController.php', app_path('Http/Controllers/TodoController.php'));
 
         // Add routes
         file_put_contents(
@@ -129,6 +130,7 @@ class CoffeeUiPreset extends Preset
                 \n\tRoute::get('analityc', 'AnalitycController@index')->name('analityc');
                 \n\tRoute::get('mail', 'MailController@index')->name('mail');
                 \n\tRoute::get('chats', 'ChatController@index')->name('chats');
+                \n\tRoute::get('todo', 'TodoController@index')->name('todo');
 
                 \n});
             \n\n",
