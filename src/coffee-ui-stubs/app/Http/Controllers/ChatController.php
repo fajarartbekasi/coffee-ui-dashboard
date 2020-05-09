@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MailController extends Controller
+class ChatController extends Controller
 {
     public function index()
     {
-        return view('pages.Dashboard.mail.index');
+        return view('pages.Dashboard.chat.index');
     }
 }

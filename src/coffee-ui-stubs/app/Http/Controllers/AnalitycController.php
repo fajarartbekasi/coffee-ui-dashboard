@@ -8,6 +8,6 @@ class AnalitycController extends Controller
 {
     public function index()
     {
-        return view('pages.Dashboard.analityc');
+        return view('pages.Dashboard.analityc.index');
     }
 }
