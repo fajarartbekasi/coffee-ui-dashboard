@@ -107,7 +107,7 @@ class CoffeeUiPreset extends Preset
             FILE_APPEND
         );
 
-        // Copy now-ui auth views from the stubs folder
+        // Copy coffee auth views from the stubs folder
 
         static::copyDirectory('resources/views/auth', resource_path('views/auth'));
     }
@@ -122,6 +122,10 @@ class CoffeeUiPreset extends Preset
         static::copyFile('app/Http/Controllers/MailController.php', app_path('Http/Controllers/MailController.php'));
         static::copyFile('app/Http/Controllers/ChatController.php', app_path('Http/Controllers/ChatController.php'));
         static::copyFile('app/Http/Controllers/TodoController.php', app_path('Http/Controllers/TodoController.php'));
+        static::copyFile('app/Http/Controllers/EcommerceController.php', app_path('Http/Controllers/EcommerceController.php'));
+        static::copyFile('app/Http/Controllers/ShopController.php', app_path('Http/Controllers/ShopController.php'));
+        static::copyFile('app/Http/Controllers/WishlistController.php', app_path('Http/Controllers/WishlistController.php'));
+        static::copyFile('app/Http/Controllers/ProfileController.php', app_path('Http/Controllers/ProfileController.php'));
 
         // Add routes
         file_put_contents(
@@ -131,6 +135,12 @@ class CoffeeUiPreset extends Preset
                 \n\tRoute::get('mail', 'MailController@index')->name('mail');
                 \n\tRoute::get('chats', 'ChatController@index')->name('chats');
                 \n\tRoute::get('todo', 'TodoController@index')->name('todo');
+                \n\tRoute::get('eCommerce', 'EcommerceController@index')->name('eCommerce');
+                \n\tRoute::get('shop/index', 'ShopController@index')->name('shop.index');
+                \n\tRoute::get('shop/show', 'ShopController@show')->name('shop.show');
+                \n\tRoute::get('shop/checkout', 'ShopController@create')->name('shop.checkout');
+                \n\tRoute::get('shop/wishlist', 'WishlistController@show')->name('shop.wishlist');
+                \n\tRoute::get('user/profile', 'ProfileController@show')->name('user.profile');
 
                 \n});
             \n\n",
