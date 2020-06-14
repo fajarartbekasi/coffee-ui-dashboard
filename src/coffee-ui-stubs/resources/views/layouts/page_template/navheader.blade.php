@@ -6,21 +6,21 @@
                 <div class="row">
                     <div class="col-3">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <a class="nav-link">
+                            <a class="nav-link" href="{{route('mail')}}">
                                 <h6 class="text-orange">Email</h6>
                             </a>
-                            <a class="nav-link"><h6 class="text-orange">Chat</h6></a>
+                            <a class="nav-link" href="{{route('chats')}}"><h6 class="text-orange">Chat</h6></a>
                             <a class="nav-link">
-                                <h6 class="text-orange">Todo</h6>
+                                <h6 class="text-orange" href="{{route('todo')}}">Todo</h6>
                             </a>
                             <div class="dropdown">
                                 <button class="btn btn-outline-white dropdown-toggle text-orange" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     eCommerce
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Shop</a>
-                                    <a class="dropdown-item" href="#">Item Details</a>
-                                    <a class="dropdown-item" href="#">Wish List</a>
+                                    <a class="dropdown-item" href="{{route('shop.index')}}">Shop</a>
+                                    <a class="dropdown-item" href="{{route('shop.show')}}">Item Details</a>
+                                    <a class="dropdown-item" href="{{route('shop.wishlist')}}">Wish List</a>
                                 </div>
                             </div>
                         </div>
@@ -35,16 +35,6 @@
                             <a class="nav-link " href="{{route('user.profile')}}">
                                 <h6 class="text-orange">
                                     Profile
-                                </h6>
-                            </a>
-                            <a class="nav-link ">
-                                <h6 class="text-orange">
-                                    User Setting
-                                </h6>
-                            </a>
-                            <a class="nav-link ">
-                                <h6 class="text-orange">
-                                    Invoice
                                 </h6>
                             </a>
                             <div class="dropdown">
@@ -73,12 +63,12 @@
                                     List
                                 </h6>
                             </a>
-                            <a class="nav-link">
+                            <a class="nav-link" href="{{route('user.profile')}}">
                                 <h6 class="text-orange">
                                     View
                                 </h6>
                             </a>
-                            <a class="nav-link">
+                            <a class="nav-link" href="{{route('user.edit.profile')}}">
                                 <h6 class="text-orange">
                                     Edit
                                 </h6>

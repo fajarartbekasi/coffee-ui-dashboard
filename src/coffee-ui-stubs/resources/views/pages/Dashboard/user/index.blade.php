@@ -131,7 +131,7 @@
             </div>
 
             <div class="pt-2">
-                <div class="table-responsive">
+                <div class="table-responsive-md">
                     <table class="table">
                         <thead>
                             <tr>
@@ -178,7 +178,7 @@
                                 </td>
                                 <td>Development</td>
                                 <td>
-                                    <button type="submit" class="btn btn-outline-light">
+                                    <button type="submit" class="btn btn-outline-light btn">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="15.986" height="15.986" viewBox="0 0 15.986 15.986">
                                                 <path id="icon-edit" d="M6.3,12.3l10-10a1,1,0,0,1,1.4,0l4,4a1,1,0,0,1,0,1.4l-10,10a1,1,0,0,1-.7.3H7a1,1,0,0,1-1-1V13a1,1,0,0,1,.3-.7ZM8,16h2.59l9-9L17,4.41l-9,9Z" transform="translate(-6 -2.014)"/>
