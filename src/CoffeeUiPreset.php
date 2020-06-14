@@ -140,6 +140,7 @@ class CoffeeUiPreset extends Preset
                 \n\tRoute::get('shop/show', 'ShopController@show')->name('shop.show');
                 \n\tRoute::get('shop/checkout', 'ShopController@create')->name('shop.checkout');
                 \n\tRoute::get('shop/wishlist', 'WishlistController@show')->name('shop.wishlist');
+                \n\tRoute::get('user/list', 'ProfileController@index')->name('user.list');
                 \n\tRoute::get('user/profile', 'ProfileController@show')->name('user.profile');
                 \n\tRoute::get('user/edit/profile', 'ProfileController@edit')->name('user.edit.profile');
 

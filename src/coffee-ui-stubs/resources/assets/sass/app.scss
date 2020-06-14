@@ -532,3 +532,21 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 1.25rem;
 }
+.verified-active {
+    background-color: #FEEBC8;
+    font-size: 18px;
+    color: #FEEBC8;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.verified-deactive {
+    background-color: #9C4221;
+    font-size: 18px;
+    color: #9C4221;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
