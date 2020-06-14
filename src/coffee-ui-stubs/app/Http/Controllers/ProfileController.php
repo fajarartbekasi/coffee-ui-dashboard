@@ -10,4 +10,8 @@ class ProfileController extends Controller
     {
         return view('pages.Dashboard.user.show');
     }
+    public function edit()
+    {
+        return view('pages.Dashboard.user.edit');
+    }
 }

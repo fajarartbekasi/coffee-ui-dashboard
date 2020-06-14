@@ -11047,6 +11047,23 @@ body {
   font-size: 18px;
 }
 
+.bg-gray-300 {
+  background-color: #E2E8F0;
+  color: #696969;
+}
+
+.btn-indigo-700 {
+  background-color: #4C51BF;
+  border-color: #4C51BF;
+  color: #3c366b;
+}
+
+.btn-red-400 {
+  background-color: transparent;
+  border-color: #FC8181;
+  color: #9b2c2c;
+}
+
 .customradio {
   display: block;
   position: relative;

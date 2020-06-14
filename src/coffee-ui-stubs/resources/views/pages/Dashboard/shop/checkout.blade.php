@@ -493,7 +493,9 @@
                                             <h6 class="text-gray-600">$699.30</h6>
                                         </div>
                                     </div>
-
+                                    <div class="">
+                                        <button type="submit" class="btn btn-orange-500 btn-block">Save And Deliver Here</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
