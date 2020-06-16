@@ -161,15 +161,7 @@ class Dispatcher implements DispatcherContract
     {
         $subscriber = $this->resolveSubscriber($subscriber);
 
-        $events = $subscriber->subscribe($this);
-
-        if (is_array($events)) {
-            foreach ($events as $event => $listeners) {
-                foreach ($listeners as $listener) {
-                    $this->listen($event, $listener);
-                }
-            }
-        }
+        $subscriber->subscribe($this);
     }
 
     /**
@@ -359,13 +351,13 @@ class Dispatcher implements DispatcherContract
     /**
      * Register an event listener with the dispatcher.
      *
-     * @param  \Closure|string|array  $listener
+     * @param  \Closure|string  $listener
      * @param  bool  $wildcard
      * @return \Closure
      */
     public function makeListener($listener, $wildcard = false)
     {
-        if (is_string($listener) || is_array($listener)) {
+        if (is_string($listener)) {
             return $this->createClassListener($listener, $wildcard);
         }
 
@@ -381,7 +373,7 @@ class Dispatcher implements DispatcherContract
     /**
      * Create a class based listener using the IoC container.
      *
-     * @param  string|array  $listener
+     * @param  string  $listener
      * @param  bool  $wildcard
      * @return \Closure
      */
@@ -401,12 +393,12 @@ class Dispatcher implements DispatcherContract
     /**
      * Create the class based event callable.
      *
-     * @param  string|array  $listener
+     * @param  string  $listener
      * @return callable
      */
     protected function createClassCallable($listener)
     {
-        [$class, $method] = is_array($listener) ? $listener : $this->parseClassCallable($listener);
+        [$class, $method] = $this->parseClassCallable($listener);
 
         if ($this->handlerShouldBeQueued($class)) {
             return $this->createQueuedHandlerCallable($class, $method);
@@ -497,9 +489,7 @@ class Dispatcher implements DispatcherContract
             $listener->connection ?? null
         );
 
-        $queue = method_exists($listener, 'viaQueue')
-                    ? $listener->viaQueue()
-                    : $listener->queue ?? null;
+        $queue = $listener->queue ?? null;
 
         isset($listener->delay)
                     ? $connection->laterOn($queue, $listener->delay, $job)
@@ -534,8 +524,7 @@ class Dispatcher implements DispatcherContract
     {
         return tap($job, function ($job) use ($listener) {
             $job->tries = $listener->tries ?? null;
-            $job->retryAfter = method_exists($listener, 'retryAfter')
-                                ? $listener->retryAfter() : ($listener->retryAfter ?? null);
+            $job->retryAfter = $listener->retryAfter ?? null;
             $job->timeout = $listener->timeout ?? null;
             $job->timeoutAt = method_exists($listener, 'retryUntil')
                                 ? $listener->retryUntil() : null;

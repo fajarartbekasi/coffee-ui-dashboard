@@ -138,12 +138,11 @@ class CacheManager implements FactoryContract
     /**
      * Create an instance of the array cache driver.
      *
-     * @param  array  $config
      * @return \Illuminate\Cache\Repository
      */
-    protected function createArrayDriver(array $config)
+    protected function createArrayDriver()
     {
-        return $this->repository(new ArrayStore($config['serialize'] ?? false));
+        return $this->repository(new ArrayStore);
     }
 
     /**
@@ -214,11 +213,7 @@ class CacheManager implements FactoryContract
 
         return $this->repository(
             new DatabaseStore(
-                $connection,
-                $config['table'],
-                $this->getPrefix($config),
-                $config['lock_table'] ?? 'cache_locks',
-                $config['lock_lottery'] ?? [2, 100]
+                $connection, $config['table'], $this->getPrefix($config)
             )
         );
     }
