@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "laravel/framework": "^7.0"
+        "laravel/framework": "7.*"
     },
     "autoload": {
         "psr-4": {
