@@ -25,8 +25,18 @@ And Laravel: https://laravel.com/docs/7.x/installation
 
 After initializing a fresh instance of Laravel (and making all the necessary configurations), install the preset using one of the provided methods:
 
+Laravel 5.7 & 5.8
 1. `Cd` to your Laravel app
 2. Type in your terminal: `composer make:auth`
+3. Install this preset via `composer require fajarartbekasi/coffee-ui-dashboard`. No need to register the service provider. Laravel 5.5 & up can auto detect the package.
+4. Run `php artisan preset coffee` command to install the NowUI preset. This will install all the necessary assets and also the custom auth views, it will also add the auth route in `routes/web.php`
+(NOTE: If you run this command several times, be sure to clean up the duplicate Auth entries in routes/web.php)
+5. In your terminal run `composer dump-autoload`
+6. Run `php artisan migrate --seed` to create basic users table
+
+Laravel 6.x & 7.x
+1. `Cd` to your Laravel app
+2. Type in your terminal: laravel 6.x `composer require laravel/ui "^1.2"`, laravel 7.x `composer require laravel/ui`
 3. Install this preset via `composer require fajarartbekasi/coffee-ui-dashboard`. No need to register the service provider. Laravel 5.5 & up can auto detect the package.
 4. Run `php artisan preset coffee` command to install the NowUI preset. This will install all the necessary assets and also the custom auth views, it will also add the auth route in `routes/web.php`
 (NOTE: If you run this command several times, be sure to clean up the duplicate Auth entries in routes/web.php)
