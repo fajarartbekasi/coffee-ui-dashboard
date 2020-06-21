@@ -3,7 +3,7 @@
 namespace FajarArtBekasi\CoffeeUiPreset;
 
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\Presets\Preset;
+use Laravel\Ui\Presets\Preset;
 
 class CoffeeUiPreset extends Preset
 {

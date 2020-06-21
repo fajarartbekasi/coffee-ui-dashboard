@@ -2,7 +2,7 @@
 
 =======
 
-![version](https://img.shields.io/badge/version-1.0.1-blue.svg) ![license](
+![version](https://img.shields.io/badge/version-v1.0.1-blue.svg) ![license](
 https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open]](https://github.com/fajarartbekasi/coffee-ui-dashboard/issues)
 
 *Frontend version*: Coffee UI Dashboard v1.0.0.
