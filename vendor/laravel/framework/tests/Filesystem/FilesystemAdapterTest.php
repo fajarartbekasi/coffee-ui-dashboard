@@ -6,8 +6,8 @@ use GuzzleHttp\Psr7\Stream;
 use Illuminate\Contracts\Filesystem\FileExistsException;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\FilesystemAdapter;
-use Illuminate\Foundation\Testing\Assert;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Testing\Assert;
 use InvalidArgumentException;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
@@ -242,7 +242,7 @@ class FilesystemAdapterTest extends TestCase
         fclose($stream);
 
         $spy->shouldHaveReceived('putStream');
-        $this->assertEquals('some-data', $filesystemAdapter->get('bar.txt'));
+        $this->assertSame('some-data', $filesystemAdapter->get('bar.txt'));
     }
 
     public function testPutFileAs()

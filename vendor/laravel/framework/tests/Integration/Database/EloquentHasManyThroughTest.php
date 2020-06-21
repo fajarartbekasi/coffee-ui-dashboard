@@ -94,7 +94,7 @@ class EloquentHasManyThroughTest extends DatabaseTestCase
 
         $users = User::has('teamMates')->get();
 
-        $this->assertEquals(1, $users->count());
+        $this->assertCount(1, $users);
     }
 
     public function testHasSelfCustomOwnerKey()
@@ -107,7 +107,7 @@ class EloquentHasManyThroughTest extends DatabaseTestCase
 
         $users = User::has('teamMatesBySlug')->get();
 
-        $this->assertEquals(1, $users->count());
+        $this->assertCount(1, $users);
     }
 
     public function testHasSameParentAndThroughParentTable()

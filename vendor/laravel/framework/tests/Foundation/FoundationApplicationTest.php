@@ -87,6 +87,18 @@ class FoundationApplicationTest extends TestCase
         $this->assertArrayHasKey($class, $app->getLoadedProviders());
     }
 
+    public function testServiceProvidersCouldBeLoaded()
+    {
+        $provider = m::mock(ServiceProvider::class);
+        $class = get_class($provider);
+        $provider->shouldReceive('register')->once();
+        $app = new Application;
+        $app->register($provider);
+
+        $this->assertTrue($app->providerIsLoaded($class));
+        $this->assertFalse($app->providerIsLoaded(ApplicationBasicServiceProviderStub::class));
+    }
+
     public function testDeferredServicesMarkedAsBound()
     {
         $app = new Application;
@@ -363,7 +375,7 @@ class FoundationApplicationTest extends TestCase
         $this->assertSame('/base/path'.$ds.'bootstrap'.$ds.'cache/services.php', $app->getCachedServicesPath());
         $this->assertSame('/base/path'.$ds.'bootstrap'.$ds.'cache/packages.php', $app->getCachedPackagesPath());
         $this->assertSame('/base/path'.$ds.'bootstrap'.$ds.'cache/config.php', $app->getCachedConfigPath());
-        $this->assertSame('/base/path'.$ds.'bootstrap'.$ds.'cache/routes.php', $app->getCachedRoutesPath());
+        $this->assertSame('/base/path'.$ds.'bootstrap'.$ds.'cache/routes-v7.php', $app->getCachedRoutesPath());
         $this->assertSame('/base/path'.$ds.'bootstrap'.$ds.'cache/events.php', $app->getCachedEventsPath());
     }
 
@@ -432,6 +444,31 @@ class FoundationApplicationTest extends TestCase
         $this->assertSame($ds.'relative/path/config.php', $app->getCachedConfigPath());
         $this->assertSame($ds.'relative/path/routes.php', $app->getCachedRoutesPath());
         $this->assertSame($ds.'relative/path/events.php', $app->getCachedEventsPath());
+
+        unset(
+            $_SERVER['APP_SERVICES_CACHE'],
+            $_SERVER['APP_PACKAGES_CACHE'],
+            $_SERVER['APP_CONFIG_CACHE'],
+            $_SERVER['APP_ROUTES_CACHE'],
+            $_SERVER['APP_EVENTS_CACHE']
+        );
+    }
+
+    public function testEnvPathsAreAbsoluteInWindows()
+    {
+        $app = new Application(__DIR__);
+        $app->addAbsoluteCachePathPrefix('C:');
+        $_SERVER['APP_SERVICES_CACHE'] = 'C:\framework\services.php';
+        $_SERVER['APP_PACKAGES_CACHE'] = 'C:\framework\packages.php';
+        $_SERVER['APP_CONFIG_CACHE'] = 'C:\framework\config.php';
+        $_SERVER['APP_ROUTES_CACHE'] = 'C:\framework\routes.php';
+        $_SERVER['APP_EVENTS_CACHE'] = 'C:\framework\events.php';
+
+        $this->assertSame('C:\framework\services.php', $app->getCachedServicesPath());
+        $this->assertSame('C:\framework\packages.php', $app->getCachedPackagesPath());
+        $this->assertSame('C:\framework\config.php', $app->getCachedConfigPath());
+        $this->assertSame('C:\framework\routes.php', $app->getCachedRoutesPath());
+        $this->assertSame('C:\framework\events.php', $app->getCachedEventsPath());
 
         unset(
             $_SERVER['APP_SERVICES_CACHE'],

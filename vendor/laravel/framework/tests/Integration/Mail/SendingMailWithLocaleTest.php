@@ -5,12 +5,12 @@ namespace Illuminate\Tests\Integration\Mail;
 use Illuminate\Contracts\Translation\HasLocalePreference;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Events\LocaleUpdated;
-use Illuminate\Foundation\Testing\Assert;
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
+use Illuminate\Testing\Assert;
 use Mockery as m;
 use Orchestra\Testbench\TestCase;
 
@@ -47,17 +47,12 @@ class SendingMailWithLocaleTest extends TestCase
         ]);
     }
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-    }
-
     public function testMailIsSentWithDefaultLocale()
     {
         Mail::to('test@mail.com')->send(new TestMail);
 
         $this->assertStringContainsString('name',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -66,7 +61,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to('test@mail.com')->locale('ar')->send(new TestMail);
 
         $this->assertStringContainsString('esm',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -78,7 +73,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to('test@mail.com')->send($mailable);
 
         $this->assertStringContainsString('esm',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -93,7 +88,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to('test@mail.com')->locale('es')->send(new TimestampTestMail);
 
         Assert::assertMatchesRegularExpression('/nombre (en|dentro de) (un|1) día/',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
 
         $this->assertSame('en', Carbon::getLocale());
@@ -109,7 +104,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to($recipient)->send(new TestMail);
 
         $this->assertStringContainsString('esm',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -123,7 +118,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to($recipient)->locale('ar')->send(new TestMail);
 
         $this->assertStringContainsString('esm',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -142,7 +137,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to($toRecipient)->cc($ccRecipient)->send(new TestMail);
 
         $this->assertStringContainsString('esm',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -162,7 +157,7 @@ class SendingMailWithLocaleTest extends TestCase
         Mail::to($recipients)->send(new TestMail);
 
         $this->assertStringContainsString('name',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
     }
 
@@ -174,11 +169,11 @@ class SendingMailWithLocaleTest extends TestCase
         $this->assertSame('en', app('translator')->getLocale());
 
         $this->assertStringContainsString('esm',
-            app('swift.transport')->messages()[0]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[0]->getBody()
         );
 
         $this->assertStringContainsString('name',
-            app('swift.transport')->messages()[1]->getBody()
+            app('mailer')->getSwiftMailer()->getTransport()->messages()[1]->getBody()
         );
     }
 }

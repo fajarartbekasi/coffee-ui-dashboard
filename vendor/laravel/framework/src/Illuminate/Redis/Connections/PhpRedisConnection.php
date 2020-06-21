@@ -4,6 +4,7 @@ namespace Illuminate\Redis\Connections;
 
 use Closure;
 use Illuminate\Contracts\Redis\Connection as ConnectionContract;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Redis;
 use RedisCluster;
@@ -240,7 +241,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      */
     public function zrangebyscore($key, $min, $max, $options = [])
     {
-        if (isset($options['limit'])) {
+        if (isset($options['limit']) && Arr::isAssoc($options['limit'])) {
             $options['limit'] = [
                 $options['limit']['offset'],
                 $options['limit']['count'],
@@ -261,7 +262,7 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      */
     public function zrevrangebyscore($key, $min, $max, $options = [])
     {
-        if (isset($options['limit'])) {
+        if (isset($options['limit']) && Arr::isAssoc($options['limit'])) {
             $options['limit'] = [
                 $options['limit']['offset'],
                 $options['limit']['count'],
@@ -304,10 +305,10 @@ class PhpRedisConnection extends Connection implements ConnectionContract
     }
 
     /**
-     * Scans the all keys based on options.
+     * Scans all keys based on options.
      *
-     * @param mixed $cursor
-     * @param array $options
+     * @param  mixed  $cursor
+     * @param  array  $options
      * @return mixed
      */
     public function scan($cursor, $options = [])
@@ -323,9 +324,9 @@ class PhpRedisConnection extends Connection implements ConnectionContract
     /**
      * Scans the given set for all values based on options.
      *
-     * @param string $key
-     * @param mixed $cursor
-     * @param array $options
+     * @param  string  $key
+     * @param  mixed  $cursor
+     * @param  array  $options
      * @return mixed
      */
     public function zscan($key, $cursor, $options = [])
@@ -339,11 +340,11 @@ class PhpRedisConnection extends Connection implements ConnectionContract
     }
 
     /**
-     * Scans the given set for all values based on options.
+     * Scans the given hash for all values based on options.
      *
-     * @param string $key
-     * @param mixed $cursor
-     * @param array $options
+     * @param  string  $key
+     * @param  mixed  $cursor
+     * @param  array  $options
      * @return mixed
      */
     public function hscan($key, $cursor, $options = [])
@@ -359,9 +360,9 @@ class PhpRedisConnection extends Connection implements ConnectionContract
     /**
      * Scans the given set for all values based on options.
      *
-     * @param string $key
-     * @param mixed $cursor
-     * @param array $options
+     * @param  string  $key
+     * @param  mixed  $cursor
+     * @param  array  $options
      * @return mixed
      */
     public function sscan($key, $cursor, $options = [])
@@ -512,6 +513,8 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      * @param  string  $method
      * @param  array  $parameters
      * @return mixed
+     *
+     * @throws \RedisException
      */
     public function command($method, array $parameters = [])
     {

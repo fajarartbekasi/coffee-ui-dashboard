@@ -4,6 +4,7 @@ namespace FajarArtBekasi\CoffeeUiPreset;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
+use Laravel\Ui\UiCommand;
 
 class CoffeeUiPresetServiceProvider extends ServiceProvider
 {
@@ -14,7 +15,7 @@ class CoffeeUiPresetServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        PresetCommand::macro('coffee', function ($command) {
+        UiCommand::macro('coffee', function ($command) {
             CoffeeUiPreset::install();
 
             $command->info('Coffee Ui scaffolding installed successfully.');
