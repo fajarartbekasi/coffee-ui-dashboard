@@ -5,6 +5,7 @@ namespace FajarArtBekasi\CoffeeUiPreset;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
 use Laravel\Ui\UiCommand;
+use Laravel\Ui\AuthCommand;
 
 class CoffeeUiPresetServiceProvider extends ServiceProvider
 {
