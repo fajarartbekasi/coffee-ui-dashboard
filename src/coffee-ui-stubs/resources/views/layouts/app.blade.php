@@ -16,7 +16,9 @@
         -ms-user-select: none;
         user-select: none;
       }
-
+      .bg-cover{
+        background-image: url("images/nordwood-themes-ivP3TYdLvw0-unsplash.jpg");
+      }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -27,15 +29,34 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="{{asset('css/')}}/app.css">
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-white">
         <div id="app">
+            <div class="container">
+              @include('layouts.page_template.navheader')
+            </div>
             @include('layouts.page_template.nav')
-            @include('layouts.page_template.navheader')
-            <main role="main" class="container">
-                <div class="my-3 py-3">
-                    @yield('content')
+
+            <div class="container-fluid">
+                <div class="row">
+                      @include('layouts.page_template.sidebar')
+                      <div class="col-md-12">
+                          <div class="jumbotron jumbotron bg-cover fixed-top">
+                        <div class="overlay"></div>
+                        <div class="container">
+                          <h1 class="display-3 mb-1">About me</h1>
+                          <p class="lead">Posted on <span>23 September 2017</span></p>
+                        </div>
+                      </div>
+                      </div>
+                    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-4" style="margin-top: -5rem;">
+                      <div class="card border-0 shadow">
+                            <div class="card-body">
+                              @yield('content')
+                            </div>
+                        </div>
+                    </main>
                 </div>
-            </main>
+            </div>
         </div>
         <script src="{{asset('js/')}}/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

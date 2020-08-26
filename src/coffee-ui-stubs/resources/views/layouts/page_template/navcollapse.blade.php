@@ -1,4 +1,4 @@
-<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+<div class="navbar-collapse offcanvas-collapse bg-red " id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown active">
             <a class="nav-link " href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
