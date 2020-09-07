@@ -17,7 +17,7 @@
         user-select: none;
       }
       .bg-cover{
-        background-image: url("images/nordwood-themes-ivP3TYdLvw0-unsplash.jpg");
+        background-image: url("/images/sincerely.jpg");
       }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -40,13 +40,13 @@
                 <div class="row">
                       @include('layouts.page_template.sidebar')
                       <div class="col-md-12">
-                          <div class="jumbotron jumbotron bg-cover fixed-top">
-                        <div class="overlay"></div>
-                        <div class="container">
-                          <h1 class="display-3 mb-1">About me</h1>
-                          <p class="lead">Posted on <span>23 September 2017</span></p>
-                        </div>
-                      </div>
+                          <div class="jumbotron jumbotron bg-cover fixed-top" >
+                              <div class="overlay" ></div>
+                              <div class="container text-center">
+                                <h1 class="display-3 mb-1">Congratulation Fajar</h1>
+                                <p class="lead">Best seller of the month</p>
+                              </div>
+                          </div>
                       </div>
                     <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-md-4" style="margin-top: -5rem;">
                       <div class="card border-0 shadow">
