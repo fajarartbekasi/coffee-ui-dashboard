@@ -1,5 +1,5 @@
 <div class="collapse bg-white" id="navbarHeader">
-    <div class="container">
+    <div class="card card-body border-0">
         <div class="row">
             <div class="col-sm-4 col-md-4 py-4">
                 <h4 class="text-orange-900">App</h4>

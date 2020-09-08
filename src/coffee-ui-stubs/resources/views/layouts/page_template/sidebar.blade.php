@@ -14,7 +14,7 @@
           <li class="nav-item pt-3 mb-3">
             <a class="nav-link" href="#">
                 <button type="submit" class="btn btn-orange-100">
-                    <span class="mr-2 icon-list">
+                    <span class="mr-2 icon-list icon-badge-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
                             <path fill="currentColor" class="heroicon-ui" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2zm16 3.38V6H4v1.38l8 4 8-4zm0 2.24l-7.55 3.77a1 1 0 0 1-.9 0L4 9.62V18h16V9.62z"/>
                         </svg>
@@ -26,7 +26,7 @@
           <li class="nav-item pt-3 mb-3">
             <a class="nav-link" href="#">
                 <button type="submit" class="btn btn-orange-100">
-                    <span class="mr-2 icon-list">
+                    <span class="mr-2 icon-list icon-badge-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
                             <path class="heroicon-ui" d="M6 14H4a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v13a1 1 0 0 1-1.7.7L16.58 18H8a2 2 0 0 1-2-2v-2zm0-2V8c0-1.1.9-2 2-2h8V4H4v8h2zm14-4H8v8h9a1 1 0 0 1 .7.3l2.3 2.29V8z"/>
                         </svg>
@@ -38,7 +38,7 @@
           <li class="nav-item pt-3 mb-3">
             <a class="nav-link" href="#">
                 <button type="submit" class="btn btn-orange-100">
-                    <span class="mr-2 icon-list">
+                    <span class="mr-2 icon-list icon-badge-container">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
                             <path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-2.3-8.7l1.3 1.29 3.3-3.3a1 1 0 0 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-2-2a1 1 0 0 1 1.4-1.42z"/>
                         </svg>
@@ -50,7 +50,7 @@
           <li class="nav-item dropdown pt-3 mb-3">
                 <a class="nav-link " href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <button type="submit" class="btn btn-orange-100">
-                        <span class="icon-list">
+                        <span class="icon-list icon-badge-container">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
                                 <path class="heroicon-ui" d="M17 16a3 3 0 1 1-2.83 2H9.83a3 3 0 1 1-5.62-.1A3 3 0 0 1 5 12V4H3a1 1 0 1 1 0-2h3a1 1 0 0 1 1 1v1h14a1 1 0 0 1 .9 1.45l-4 8a1 1 0 0 1-.9.55H5a1 1 0 0 0 0 2h12zM7 12h9.38l3-6H7v6zm0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                             </svg>

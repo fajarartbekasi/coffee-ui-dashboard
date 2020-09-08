@@ -42,9 +42,9 @@
                       <div class="col-md-12">
                           <div class="jumbotron jumbotron bg-cover fixed-top" >
                               <div class="overlay" ></div>
-                              <div class="container text-center">
-                                <h1 class="display-3 mb-1">Congratulation Fajar</h1>
-                                <p class="lead">Best seller of the month</p>
+                              <div class="container">
+                                <h1 class="display-3 mb-1">Hello, Welcome to</h1>
+                                <h4>Coffee UI KIT V1.1</h4>
                               </div>
                           </div>
                       </div>
